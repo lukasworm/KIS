@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController">
+            <connections>
+                <outlet property="closeButton" destination="nTh-Xp-uub" id="WzC-mm-beO"/>
+                <outlet property="collectionView" destination="szq-xP-9uS" id="Y9Z-aN-hcT"/>
+                <outlet property="lblTitle" destination="0JZ-LW-3Do" id="CQh-up-KB7"/>
+                <outlet property="playerView" destination="Dw4-eh-y80" id="tlO-8Y-8we"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbi-5e-beJ" userLabel="Content View">
+                    <rect key="frame" x="135" y="0.0" width="465" height="600"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JZ-LW-3Do">
+                            <rect key="frame" x="19" y="27" width="52" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.30588235294117649" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="szq-xP-9uS">
+                            <rect key="frame" x="19" y="91" width="419" height="509"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Oy-sn-War">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="uyi-0L-9XC"/>
+                                <outlet property="delegate" destination="-1" id="A7l-li-yHo"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="szq-xP-9uS" firstAttribute="top" secondItem="mbi-5e-beJ" secondAttribute="bottom" multiplier="234:1536" id="0uH-7k-l03"/>
+                        <constraint firstItem="0JZ-LW-3Do" firstAttribute="top" secondItem="mbi-5e-beJ" secondAttribute="bottom" multiplier="70:1536" id="6Gg-DK-4Dz"/>
+                        <constraint firstItem="0JZ-LW-3Do" firstAttribute="leading" secondItem="mbi-5e-beJ" secondAttribute="trailing" multiplier="65:1586" id="R02-gJ-925"/>
+                        <constraint firstAttribute="bottom" secondItem="szq-xP-9uS" secondAttribute="bottom" id="ZIW-Ej-QtS"/>
+                        <constraint firstAttribute="trailing" secondItem="szq-xP-9uS" secondAttribute="trailing" multiplier="1586:1494" id="ube-N8-OId"/>
+                        <constraint firstItem="szq-xP-9uS" firstAttribute="leading" secondItem="mbi-5e-beJ" secondAttribute="trailing" multiplier="65:1586" id="vBd-mM-BS4"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-eh-y80" customClass="YTPlayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTh-Xp-uub">
+                            <rect key="frame" x="537" y="552" width="51" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Close"/>
+                            <connections>
+                                <action selector="onClose:" destination="-1" eventType="touchUpInside" id="a5L-r8-8kv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nTh-Xp-uub" secondAttribute="trailing" constant="12" id="3mW-2V-VEI"/>
+                        <constraint firstAttribute="bottom" secondItem="nTh-Xp-uub" secondAttribute="bottom" constant="12" id="8hf-cW-PnH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Dw4-eh-y80" secondAttribute="trailing" id="0t2-cw-1hU"/>
+                <constraint firstAttribute="trailing" secondItem="mbi-5e-beJ" secondAttribute="trailing" id="9BX-EV-RXg"/>
+                <constraint firstItem="Dw4-eh-y80" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A5A-xq-92V"/>
+                <constraint firstItem="Dw4-eh-y80" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kVo-0f-Cgr"/>
+                <constraint firstAttribute="bottom" secondItem="Dw4-eh-y80" secondAttribute="bottom" id="sho-os-Xld"/>
+                <constraint firstItem="mbi-5e-beJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="trailing" multiplier="462:2048" id="vwr-XI-utb"/>
+                <constraint firstAttribute="bottom" secondItem="mbi-5e-beJ" secondAttribute="bottom" id="xfW-aT-Skl"/>
+                <constraint firstItem="mbi-5e-beJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zfU-t6-uoZ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

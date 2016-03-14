@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9059"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenuViewController">
+            <connections>
+                <outlet property="menuView" destination="VNK-kw-wVO" id="Sf4-nX-Cfe"/>
+                <outlet property="sideMenuFooterView" destination="2E2-bK-BXl" id="RfZ-f6-SVg"/>
+                <outlet property="sideMenuView" destination="iN0-l3-epB" id="Adi-Cv-HDV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8e-gz-4xD" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="230" height="768"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ae-so-aP1" userLabel="LineView">
+                            <rect key="frame" x="20" y="90" width="190" height="1"/>
+                            <color key="backgroundColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNK-kw-wVO" userLabel="MenuView">
+                            <rect key="frame" x="0.0" y="103" width="230" height="545"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2E2-bK-BXl" userLabel="MenuFooterView">
+                            <rect key="frame" x="0.0" y="656" width="230" height="112"/>
+                            <color key="backgroundColor" red="0.0" green="0.30588235294117649" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="1ae-so-aP1" firstAttribute="top" secondItem="g8e-gz-4xD" secondAttribute="bottom" multiplier="180:1536" id="AGL-Dx-z1i"/>
+                        <constraint firstAttribute="trailing" secondItem="2E2-bK-BXl" secondAttribute="trailing" id="CLg-Zp-Kvt"/>
+                        <constraint firstAttribute="trailing" secondItem="VNK-kw-wVO" secondAttribute="trailing" id="E3y-hd-QOl"/>
+                        <constraint firstItem="2E2-bK-BXl" firstAttribute="top" secondItem="VNK-kw-wVO" secondAttribute="bottom" constant="8" id="Lm1-5A-xdq"/>
+                        <constraint firstAttribute="bottom" secondItem="2E2-bK-BXl" secondAttribute="bottom" id="Pao-G5-ro0"/>
+                        <constraint firstAttribute="trailing" secondItem="1ae-so-aP1" secondAttribute="trailing" constant="20" id="XGL-i4-SuG"/>
+                        <constraint firstItem="VNK-kw-wVO" firstAttribute="leading" secondItem="g8e-gz-4xD" secondAttribute="leading" id="cOE-2U-WOF"/>
+                        <constraint firstItem="1ae-so-aP1" firstAttribute="leading" secondItem="g8e-gz-4xD" secondAttribute="leading" constant="20" id="cu4-rH-q4Z"/>
+                        <constraint firstItem="2E2-bK-BXl" firstAttribute="height" secondItem="g8e-gz-4xD" secondAttribute="height" multiplier="224:1536" id="jGf-B8-ifE"/>
+                        <constraint firstItem="VNK-kw-wVO" firstAttribute="top" secondItem="1ae-so-aP1" secondAttribute="bottom" constant="12" id="kV6-xS-ydJ"/>
+                        <constraint firstItem="1ae-so-aP1" firstAttribute="height" secondItem="g8e-gz-4xD" secondAttribute="height" multiplier="2:1536" id="qP5-WP-9A1"/>
+                        <constraint firstItem="2E2-bK-BXl" firstAttribute="leading" secondItem="g8e-gz-4xD" secondAttribute="leading" id="wVd-kd-P16"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="g8e-gz-4xD" secondAttribute="bottom" id="7sp-YP-Ivf"/>
+                <constraint firstAttribute="trailing" secondItem="g8e-gz-4xD" secondAttribute="trailing" id="8kt-mt-hia"/>
+                <constraint firstItem="g8e-gz-4xD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hNf-rS-nt9"/>
+                <constraint firstItem="g8e-gz-4xD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zLm-Eb-ItX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="201" y="360"/>
+        </view>
+    </objects>
+</document>

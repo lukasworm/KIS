@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FamilyViewController">
+            <connections>
+                <outlet property="commLineLabel" destination="Ofg-N2-psr" id="UKO-T0-5eM"/>
+                <outlet property="familyLabel" destination="DUA-pe-zki" id="7vz-di-Oim"/>
+                <outlet property="productsCollectionView" destination="S4R-dT-kiM" id="paV-zP-nb6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-WJ-NS7" userLabel="ContentView">
+                    <rect key="frame" x="231" y="0.0" width="793" height="768"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUA-pe-zki">
+                            <rect key="frame" x="33" y="70" width="49" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S4R-dT-kiM" userLabel="Products Collection View">
+                            <rect key="frame" x="33" y="118" width="737" height="650"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Ij-5Q-x2C">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="pj2-KW-JOl"/>
+                                <outlet property="delegate" destination="-1" id="0mt-7o-SLf"/>
+                            </connections>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-sl-eK7">
+                            <rect key="frame" x="718" y="26" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="pAr-sl-eK7" secondAttribute="height" multiplier="1:1" id="SNN-OK-upQ"/>
+                            </constraints>
+                            <state key="normal" image="ico_back_white.png"/>
+                            <connections>
+                                <action selector="backButton:" destination="-1" eventType="touchUpInside" id="t9W-f0-jMi"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-N2-psr">
+                            <rect key="frame" x="33" y="35" width="128" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ofg-N2-psr" firstAttribute="leading" secondItem="QtK-WJ-NS7" secondAttribute="trailing" multiplier="65:1586" id="Jc6-xx-zCR"/>
+                        <constraint firstAttribute="trailing" secondItem="pAr-sl-eK7" secondAttribute="trailing" multiplier="1586:1516" id="LW9-oW-fkK"/>
+                        <constraint firstItem="DUA-pe-zki" firstAttribute="top" secondItem="QtK-WJ-NS7" secondAttribute="bottom" multiplier="140:1536" id="O8P-AR-n1q"/>
+                        <constraint firstItem="S4R-dT-kiM" firstAttribute="top" secondItem="QtK-WJ-NS7" secondAttribute="bottom" multiplier="236:1536" id="Otb-q8-AgA"/>
+                        <constraint firstItem="Ofg-N2-psr" firstAttribute="top" secondItem="QtK-WJ-NS7" secondAttribute="bottom" multiplier="70:1536" id="ZNw-gP-N3y"/>
+                        <constraint firstAttribute="bottom" secondItem="S4R-dT-kiM" secondAttribute="bottom" id="b6i-qe-FRZ"/>
+                        <constraint firstItem="pAr-sl-eK7" firstAttribute="centerY" secondItem="Ofg-N2-psr" secondAttribute="centerY" id="bTd-d9-POu"/>
+                        <constraint firstItem="DUA-pe-zki" firstAttribute="leading" secondItem="QtK-WJ-NS7" secondAttribute="trailing" multiplier="65:1586" id="cCh-BV-4WS"/>
+                        <constraint firstAttribute="trailing" secondItem="S4R-dT-kiM" secondAttribute="trailing" multiplier="1586:1540" id="kC9-Dq-aQ0"/>
+                        <constraint firstItem="S4R-dT-kiM" firstAttribute="leading" secondItem="QtK-WJ-NS7" secondAttribute="trailing" multiplier="65:1586" id="ojf-UY-8lR"/>
+                        <constraint firstItem="pAr-sl-eK7" firstAttribute="height" secondItem="QtK-WJ-NS7" secondAttribute="height" multiplier="80:1536" id="vfR-M5-kx7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QtK-WJ-NS7" secondAttribute="trailing" id="NuQ-tL-JDb"/>
+                <constraint firstItem="QtK-WJ-NS7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="trailing" multiplier="462:2048" id="caY-3I-qdG"/>
+                <constraint firstAttribute="bottom" secondItem="QtK-WJ-NS7" secondAttribute="bottom" id="g7W-86-Bos"/>
+                <constraint firstItem="QtK-WJ-NS7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qvJ-yn-y0S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="281" y="240"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_back_white.png" width="91" height="91"/>
+    </resources>
+</document>

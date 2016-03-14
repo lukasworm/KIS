@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnstoreViewController">
+            <connections>
+                <outlet property="contentView" destination="RwE-dL-wr2" id="RjA-AH-kPL"/>
+                <outlet property="pageControl" destination="9sc-E8-AUg" id="uAg-mQ-Eua"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-dL-wr2" userLabel="Content View">
+                    <rect key="frame" x="135" y="0.0" width="465" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-E8-AUg">
+                    <rect key="frame" x="135" y="513" width="465" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="0.0" green="0.3294117647" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9sc-E8-AUg" secondAttribute="trailing" id="0GU-sv-vPc"/>
+                <constraint firstAttribute="trailing" secondItem="RwE-dL-wr2" secondAttribute="trailing" id="2lg-D6-zHm"/>
+                <constraint firstItem="RwE-dL-wr2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FVV-aG-7Zt"/>
+                <constraint firstAttribute="bottom" secondItem="9sc-E8-AUg" secondAttribute="bottom" constant="50" id="ICL-Y2-Cej"/>
+                <constraint firstAttribute="bottom" secondItem="RwE-dL-wr2" secondAttribute="bottom" id="TLc-5H-gio"/>
+                <constraint firstItem="9sc-E8-AUg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="trailing" multiplier="462:2048" id="a2p-uG-vlx"/>
+                <constraint firstItem="RwE-dL-wr2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="trailing" multiplier="462:2048" id="aZy-Fg-HBg"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

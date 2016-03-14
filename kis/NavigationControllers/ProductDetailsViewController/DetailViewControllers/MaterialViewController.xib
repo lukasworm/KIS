@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MaterialViewController">
+            <connections>
+                <outlet property="mCollectionView" destination="wfN-YT-n9b" id="lhT-Wd-8sC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIQ-X7-GjZ" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wfN-YT-n9b">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b8s-NW-45e">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="g1F-jb-1Sh"/>
+                                <outlet property="delegate" destination="-1" id="x0O-cy-BxQ"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wfN-YT-n9b" firstAttribute="leading" secondItem="XIQ-X7-GjZ" secondAttribute="leading" id="6o2-CV-64f"/>
+                        <constraint firstItem="wfN-YT-n9b" firstAttribute="top" secondItem="XIQ-X7-GjZ" secondAttribute="top" id="kh3-73-nro"/>
+                        <constraint firstAttribute="bottom" secondItem="wfN-YT-n9b" secondAttribute="bottom" id="vbM-Er-8yn"/>
+                        <constraint firstAttribute="trailing" secondItem="wfN-YT-n9b" secondAttribute="trailing" id="wda-6W-G7O"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XIQ-X7-GjZ" secondAttribute="trailing" id="6UX-SB-qLz"/>
+                <constraint firstItem="XIQ-X7-GjZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BKI-dU-BXL"/>
+                <constraint firstItem="XIQ-X7-GjZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wzk-hL-dAZ"/>
+                <constraint firstAttribute="bottom" secondItem="XIQ-X7-GjZ" secondAttribute="bottom" id="d90-ws-kzs"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
